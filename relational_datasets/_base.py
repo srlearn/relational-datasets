@@ -10,6 +10,7 @@
 # License: BSD 3 clause
 
 
+from collections import namedtuple
 from os import environ
 from os import makedirs
 from os.path import join
@@ -17,7 +18,10 @@ from os.path import expanduser
 import shutil
 
 
-__all__ = ["get_data_home", "clear_data_home"]
+__all__ = ["get_data_home", "clear_data_home", "RelationalDataset"]
+
+
+RelationalDataset = namedtuple("RelationalDataset", ["pos", "neg", "facts"])
 
 
 def get_data_home(data_home=None) -> str:
@@ -43,5 +47,5 @@ def get_data_home(data_home=None) -> str:
 def clear_data_home(data_home=None) -> None:
     """Delete all content of the data home cache.
     """
-    _data_home = get_data_home()
-    shutil.rmtree(_data_home)
+    data_home = get_data_home(data_home)
+    shutil.rmtree(data_home)
