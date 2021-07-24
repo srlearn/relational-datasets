@@ -9,33 +9,31 @@
 #             2010 Olivier Grisel <olivier.grisel@ensta.org>
 # License: BSD 3 clause
 
+"""
+Utility methods
+"""
 
-from collections import namedtuple
 from os import environ
 from os import makedirs
 from os.path import join
 from os.path import expanduser
 import shutil
+from typing import Optional
+
+__all__ = ["get_data_home", "clear_data_home"]
 
 
-__all__ = ["get_data_home", "clear_data_home", "RelationalDataset"]
-
-
-RelationalDataset = namedtuple("RelationalDataset", ["pos", "neg", "facts"])
-
-
-def get_data_home(data_home=None) -> str:
+def get_data_home(data_home: Optional[str] = None) -> str:
     """Return the path to the relational-datasets home directory.
 
-    Examples
-    --------
+    Examples:
 
     If the ``RELATIONAL_DATASETS`` environment variable is set, this will use
     the location.
 
-    .. code-block:: bash
-
-        RELATIONAL_DATASETS=my_custom_directory python
+    ```bash
+    RELATIONAL_DATASETS=my_custom_directory python
+    ```
     """
     if data_home is None:
         data_home = environ.get("RELATIONAL_DATASETS", join("~", "relational_datasets"))
@@ -44,7 +42,7 @@ def get_data_home(data_home=None) -> str:
     return data_home
 
 
-def clear_data_home(data_home=None) -> None:
+def clear_data_home(data_home: Optional[str] = None) -> None:
     """Delete all content of the data home cache.
     """
     data_home = get_data_home(data_home)
