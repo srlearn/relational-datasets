@@ -1,8 +1,19 @@
 # Copyright © 2021 Alexander L. Hayes
 # Apache 2.0 License
 
-"""Download Relational Datasets
+"""Request copies of relational datasets.
 """
+
+# TODO(hayesall): Modes. Where do I put them, how do I store them?
+#   A more-general "schema" would be helpful. Plus it would probably be
+#   cleaner if I separated advice about structure, types, and search procedures.
+
+# TODO(hayesall): `load` could be made iterable with a generator expression.
+#   Possibly useful for iterating over all folds, e.g. for cross validation.
+
+# TODO(hayesall): It doesn't make sense to allow a `data_home` parameter
+#   when a user cannot modify the parameter in the `_make_file_path`
+#   function.
 
 from io import BytesIO
 from io import TextIOWrapper
@@ -11,10 +22,11 @@ import pathlib
 from urllib.request import urlopen
 from zipfile import ZipFile
 from typing import Tuple
+from typing import Optional
 
 
 from ._base import get_data_home
-from ._base import RelationalDataset
+from .types import RelationalDataset
 
 
 VERSION_URL = (
@@ -33,6 +45,14 @@ LATEST_VERSION = "v0.0.3"
 
 def latest_version() -> str:
     """Get the latest ``srlearn/datasets`` version from GitHub's REST API."""
+
+    # TODO(hayesall): I probably should not encourage doing this.
+    #   The GitHub REST API is limited to 60 requests per hour when
+    #   a token isn't passed.
+    #   https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication
+    #
+    #   Authenticated users get 5_000 requests per hour.
+
     with urlopen(
         "https://api.github.com/repos/srlearn/datasets/releases/latest"
     ) as url:
@@ -40,33 +60,37 @@ def latest_version() -> str:
     return api_response["tag_name"]
 
 
-def load(
-    name: str, version: str = "", fold: int = 1
-) -> Tuple[RelationalDataset, RelationalDataset]:
-    """Load version of dataset.
+def load(name: str, version: Optional[str] = None, *, fold: int = 1) -> Tuple[RelationalDataset, RelationalDataset]:
+    """Get train/test instances of a dataset
 
-    Parameters
-    ----------
-    name : str
-        Dataset name (e.g. ``toy_cancer``)
-    version : str
-        Dataset version (e.g. `v0.0.3`)
-    fold : int
-        In datasets with multiple folds, return the fold with this number
+    Arguments:
+        name: Dataset name (e.g. `toy_cancer`)
+        version: Dataset version (e.g. `v0.0.3`)
+        fold: In datasets with multiple folds, return this fold. This value is
+            ignored if the data is not split into multiple folds.
 
+    Returns:
+        Returns the training and test.
 
-    Examples
-    --------
+    Raises:
+        urllib.error.URLError: If the data is not in the cache and cannot be
+            downloaded, a failed request will raise this exception.
+
+    Examples:
 
     Load version ``v0.0.3`` of the ``toy_cancer`` dataset:
 
+    ```python
     >>> from relational_datasets import load
     >>> train, test = load("toy_cancer", "v0.0.3")
     >>> train.pos
     ['cancer(alice).', 'cancer(bob).', 'cancer(chuck).', 'cancer(fred).']
+    ```
     """
 
     data_location = fetch(name, version)
+
+    # TODO(hayesall): This should probably be a `deserialize`/`unzip` function.
 
     # Deserialize the contents
     with ZipFile(data_location) as myzip:
@@ -115,11 +139,43 @@ def load(
     )
 
 
-def fetch(name: str, version: str = "") -> str:
-    """Get the file location of a dataset with a name/version. Download if unavailable.
+def fetch(name: str, version: Optional[str] = None) -> str:
+    """Get a dataset with a name/version. Return path to a zipfile.
+
+    Something else.
+
+    Arguments:
+        name: Dataset name, usually lowercase with underscores.
+        version: Dataset version. Downloads a default (`v0.0.3`) if not provided.
+
+    Returns:
+        A string representing the path to the downloaded dataset. For example:
+
+        ```python
+        '/home/user/relational_datasets/toy_cancer_v0.0.3.zip'
+        ```
+
+        The path is converted to a string from a `pathlib` object, so it should
+        work cross-platform.
+
+    Raises:
+        urllib.error.URLError: If the data is not in the cache and cannot be
+            downloaded, a failed request will raise this exception.
+
+    Examples:
+
+    Fetch `toy_cancer` dataset, version `v0.0.3`:
+
+    ```python
+    from relational_datasets import fetch
+
+    fetch('toy_cancer', 'v0.0.3')
+    # '/home/user/relational_datasets/toy_cancer_v0.0.3.zip'
+    ```
     """
 
-    data_file = pathlib.Path(get_data_home()).joinpath(f"{name}_{version}.zip")
+    # TODO(hayesall): This logic might be moved into the same function.
+    data_file = _make_file_path(name, version)
     if data_file.is_file():
         return str(data_file)
 
@@ -134,6 +190,16 @@ def fetch(name: str, version: str = "") -> str:
         _fh.write(data.getbuffer())
 
     return str(data_file)
+
+
+def _make_file_path(name: str, version: str = ""):
+    """Create a file path where data are stored.
+
+    If a `version` is not provided, the `LATEST_VERSION` is used.
+    """
+    if not version:
+        return pathlib.Path(get_data_home()).joinpath(f"{name}_{LATEST_VERSION}.zip")
+    return pathlib.Path(get_data_home()).joinpath(f"{name}_{version}.zip")
 
 
 def _make_data_url(name: str, version: str = "") -> str:
