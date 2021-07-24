@@ -1,0 +1,7 @@
+pytest
+pytest-cov
+mkdocs
+mkdocs-git-revision-date-localized-plugin
+mkdocstrings
+mkdocs-awesome-pages-plugin
+mkdocs-jupyter
