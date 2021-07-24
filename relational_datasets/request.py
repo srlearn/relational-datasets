@@ -60,7 +60,9 @@ def latest_version() -> str:
     return api_response["tag_name"]
 
 
-def load(name: str, version: Optional[str] = None, *, fold: int = 1) -> Tuple[RelationalDataset, RelationalDataset]:
+def load(
+    name: str, version: Optional[str] = None, *, fold: int = 1
+) -> Tuple[RelationalDataset, RelationalDataset]:
     """Get train/test instances of a dataset
 
     Arguments:
