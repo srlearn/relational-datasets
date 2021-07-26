@@ -1,6 +1,7 @@
 pytest
 pytest-cov
 mkdocs
+mkdocs-material
 mkdocs-git-revision-date-localized-plugin
 mkdocstrings
 mkdocs-awesome-pages-plugin
