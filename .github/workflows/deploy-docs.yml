@@ -28,7 +28,7 @@ jobs:
           pip install -r requirements_dev.txt
 
       - name: Build Extra Pages 🔧
-        working_directory: ./docs/
+        working-directory: ./docs/
         run: |
           python build_docs.py
         env:
