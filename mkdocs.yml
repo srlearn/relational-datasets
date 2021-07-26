@@ -1,8 +1,9 @@
 site_name: relational-datasets
-
-repo_name: hayesall/relational-datasets
+site_description: "A small library for loading and downloading relational datasets."
+repo_name: "hayesall/relational-datasets"
+site_url: "https://srlearn.github.io/relational-datasets/"
 repo_url: https://github.com/hayesall/relational-datasets/
-edit_uri: edit/main/docs/
+edit_uri: "blob/main/docs/"
 
 
 theme:
@@ -39,12 +40,6 @@ plugins:
   - git-revision-date-localized
   - awesome-pages
   - mkdocs-jupyter
-
-  # git-revision-date-localized suggests changing some settings before deploy.
-  # https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
-  #
-  # Specifically: Setting GitHub Actions `fetch_depth` to 0 in `checkout`
-  # https://github.com/actions/checkout
 
 nav:
   - Home: index.md
