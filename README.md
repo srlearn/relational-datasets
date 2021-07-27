@@ -7,8 +7,9 @@ pip install relational-datasets
 ```
 
 [![PyPi Version](https://img.shields.io/pypi/v/relational-datasets)](https://pypi.org/project/relational-datasets/)
-[![License](https://img.shields.io/github/license/hayesall/relational-datasets)](https://github.com/hayesall/relational-datasets/blob/main/LICENSE)
-[![Python Package](https://github.com/hayesall/relational-datasets/actions/workflows/python-package.yml/badge.svg)](https://github.com/hayesall/relational-datasets/actions/workflows/python-package.yml)
+[![License](https://img.shields.io/github/license/srlearn/relational-datasets)](https://github.com/srlearn/relational-datasets/blob/main/LICENSE)
+[![Python Package Builds](https://github.com/srlearn/relational-datasets/actions/workflows/python-package.yml/badge.svg)](https://github.com/srlearn/relational-datasets/actions/workflows/python-package.yml)
+[![Documentation Deploy](https://github.com/srlearn/relational-datasets/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/srlearn/relational-datasets/actions/workflows/deploy-docs.yml)
 
 ## Pre-Alpha Release
 
@@ -18,7 +19,7 @@ are currently being experimented with.
 
 Open enhancements and bugs are tracked here:
 
-- [Issues: relational-datasets package](https://github.com/hayesall/relational-datasets/issues)
+- [Issues: relational-datasets package](https://github.com/srlearn/relational-datasets/issues)
 - [Issues: datasets](https://github.com/srlearn/datasets/issues)
 
 ## Use Case 1: Fetching Zipfiles
@@ -70,7 +71,7 @@ pip install relational-datasets
 ### From GitHub Source
 
 ```bash
-git clone https://github.com/hayesall/relational-datasets.git
+git clone https://github.com/srlearn/relational-datasets.git
 cd relational-datasets
 pip install -e .
 ```

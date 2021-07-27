@@ -25,6 +25,7 @@ setup(
     version=__version__,
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
+    url="https://srlearn.github.io/relational-datasets/",
     download_url="https://github.com/hayesall/relational-datasets",
     license="Apache License, Version 2.0",
     python_requires=">=3.7",

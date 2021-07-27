@@ -1,8 +1,8 @@
 site_name: relational-datasets
 site_description: "A small library for loading and downloading relational datasets."
-repo_name: "hayesall/relational-datasets"
+repo_name: "srlearn/relational-datasets"
 site_url: "https://srlearn.github.io/relational-datasets/"
-repo_url: https://github.com/hayesall/relational-datasets/
+repo_url: https://github.com/srlearn/relational-datasets/
 edit_uri: "blob/main/docs/"
 
 
