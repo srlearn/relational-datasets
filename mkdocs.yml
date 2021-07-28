@@ -28,6 +28,7 @@ theme:
 markdown_extensions:
   - toc:
       permalink: true
+  - admonition
   - pymdownx.superfences
   - pymdownx.snippets
 
@@ -47,6 +48,9 @@ nav:
     - request.load: api/request.load.md
     - request.fetch: api/request.fetch.md
     - types.RelationalDataset: api/relationaldataset.md
+    - Unstable:
+      - request.deserialize_zipfile: api/request.deserialize_zipfile.md
+      - request.latest_version: api/request.latest_version.md
   - Downloads: downloads.md
   - ... | dataset_descriptions/*.md
   - Notebooks:
