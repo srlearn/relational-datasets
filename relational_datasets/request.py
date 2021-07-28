@@ -44,14 +44,31 @@ LATEST_VERSION = "v0.0.3"
 
 
 def latest_version() -> str:
-    """Get the latest ``srlearn/datasets`` version from GitHub's REST API."""
+    """Get the latest ``srlearn/datasets`` version from GitHub's REST API.
 
-    # TODO(hayesall): I probably should not encourage doing this.
-    #   The GitHub REST API is limited to 60 requests per hour when
-    #   a token isn't passed.
-    #   https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication
-    #
-    #   Authenticated users get 5_000 requests per hour.
+    !!! danger end
+        GitHub's REST API is limited to 60 requests per hour when an OAuth
+        token is not passed. This function is included for convenience, but
+        should only be used interactively.
+
+        Usually you'll be better looking at the latest version from your browser,
+        see the [Releases Page](https://github.com/srlearn/datasets/tags).
+
+        Read more on the
+        [GitHub REST API Authentication](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication).
+
+    Returns:
+        The latest version of datasets stored in the
+        [`srlearn/datasets`](https://github.com/srlearn/datasets/) repository.
+
+    Examples:
+
+    ```python
+    from relational_datasets.request import latest_version
+    latest_version()
+    # 'v0.0.3'
+    ```
+    """
 
     with urlopen(
         "https://api.github.com/repos/srlearn/datasets/releases/latest"
@@ -60,41 +77,81 @@ def latest_version() -> str:
     return api_response["tag_name"]
 
 
-def load(
-    name: str, version: Optional[str] = None, *, fold: int = 1
+def deserialize_zipfile(
+    data_location: str, name: str, *, fold: int = 1
 ) -> Tuple[RelationalDataset, RelationalDataset]:
-    """Get train/test instances of a dataset
+    """Deserialize a zipfile, returning train and test sets.
+
+    !!! warning end
+        This method is presented here to illustrate how data are unpacked from
+        zip archives. The user is responsible for the structure of custom archives.
+
+        The [`srlearn/datasets`](https://github.com/srlearn/datasets/tree/main/srlearn)
+        repository defines the assumptions for how datasets are stored.
+
+        Structure generally falls into two categories, where `{{ name }}`
+        represents the dataset (e.g. `cora`, `toy_cancer`):
+
+        ```
+        {{ name }}
+        ├── README.md
+        └── {{ name }}
+            ├─── background.txt
+            ├─── train ─── train_pos.txt, train_neg.txt, train_facts.txt
+            └─── test ──── test_pos.txt, test_neg.txt, test_facts.txt
+        ```
+
+        ... or:
+
+        ```
+        {{ name }}
+        ├── README.md
+        └── {{ name }}
+            ├─── background.txt
+            ├─── fold1
+            │      ├─── train ─── train_pos.txt, train_neg.txt, train_facts.txt
+            │      └─── test ──── test_pos.txt, test_neg.txt, test_facts.txt
+            ├─── fold2
+            .
+            .
+        ```
 
     Arguments:
-        name: Dataset name (e.g. `toy_cancer`)
-        version: Dataset version (e.g. `v0.0.3`)
+        data_location: Location of a zipfile.
+        name: Name of the dataset.
         fold: In datasets with multiple folds, return this fold. This value is
             ignored if the data is not split into multiple folds.
 
     Returns:
-        Returns the training and test.
-
-    Raises:
-        urllib.error.URLError: If the data is not in the cache and cannot be
-            downloaded, a failed request will raise this exception.
+        Tuple of training and test sets.
 
     Examples:
 
-    Load version ``v0.0.3`` of the ``toy_cancer`` dataset:
+    This loads fold-2 of cora-v0.0.3 using an absolute path to the dataset,
+    assuming that it is already downloaded:
 
     ```python
-    >>> from relational_datasets import load
-    >>> train, test = load("toy_cancer", "v0.0.3")
-    >>> train.pos
-    ['cancer(alice).', 'cancer(bob).', 'cancer(chuck).', 'cancer(fred).']
+    from relational_datasets.request import deserialize_zipfile
+
+    train, test = deserialize_zipfile(
+        '/home/user/relational_datasets/cora_v0.0.3.zip',
+        'cora',
+        fold=2,
+    )
+    ```
+
+    This can also load from the current directory:
+
+    ```python
+    from relational_datasets.request import deserialize_zipfile
+
+    train, test = deserialize_zipfile(
+        './cora_v0.0.3.zip',
+        'cora',
+    )
     ```
     """
 
-    data_location = fetch(name, version)
-
-    # TODO(hayesall): This should probably be a `deserialize`/`unzip` function.
-
-    # Deserialize the contents
     with ZipFile(data_location) as myzip:
 
         folds = _n_folds(myzip)
@@ -139,6 +196,39 @@ def load(
         RelationalDataset._make([train_pos, train_neg, train_facts]),
         RelationalDataset._make([test_pos, test_neg, test_facts]),
     )
+
+
+def load(
+    name: str, version: Optional[str] = None, *, fold: int = 1
+) -> Tuple[RelationalDataset, RelationalDataset]:
+    """Get train/test instances of a dataset
+
+    Arguments:
+        name: Dataset name (e.g. `toy_cancer`)
+        version: Dataset version (e.g. `v0.0.3`)
+        fold: In datasets with multiple folds, return this fold. This value is
+            ignored if the data is not split into multiple folds.
+
+    Returns:
+        Returns the training and test.
+
+    Raises:
+        urllib.error.URLError: If the data is not in the cache and cannot be
+            downloaded, a failed request will raise this exception.
+
+    Examples:
+
+    Load version ``v0.0.3`` of the ``toy_cancer`` dataset:
+
+    ```python
+    >>> from relational_datasets import load
+    >>> train, test = load("toy_cancer", "v0.0.3")
+    >>> train.pos
+    ['cancer(alice).', 'cancer(bob).', 'cancer(chuck).', 'cancer(fred).']
+    ```
+    """
+    data_location = fetch(name, version)
+    return deserialize_zipfile(data_location, name=name, fold=fold)
 
 
 def fetch(name: str, version: Optional[str] = None) -> str:
