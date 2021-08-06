@@ -39,7 +39,7 @@ def build_dataset_descriptions():
         latest = json.loads(url.read().decode("utf-8"))
 
     for asset in latest["assets"]:
-        name = asset["name"].split(".zip")[0]
+        name = asset["name"].split("_v")[0]
 
         req = Request(
             f"https://raw.githubusercontent.com/srlearn/datasets/main/srlearn/{name}/README.md",
