@@ -18,6 +18,7 @@
 from io import BytesIO
 from io import TextIOWrapper
 import json
+import logging
 import pathlib
 from urllib.request import urlopen
 from zipfile import ZipFile
@@ -30,6 +31,10 @@ from .types import RelationalDataset
 
 
 VERSION_URL = (
+    "https://github.com/srlearn/datasets/releases/download/{version}/{archive}_{version}.zip"
+)
+OLD_VERSION_URL = (
+    # TODO(hayesall): Used in v0.0.2 and v0.0.3, remove in the beta release.
     "https://github.com/srlearn/datasets/releases/download/{version}/{archive}.zip"
 )
 DATASETS = [
@@ -39,8 +44,12 @@ DATASETS = [
     "cora",
     "uwcse",
     "webkb",
+    "financial_nlp_small",
+    "nell_sports",
+    "icml",
+    "boston_housing",
 ]
-LATEST_VERSION = "v0.0.3"
+LATEST_VERSION = "v0.0.4"
 
 
 def latest_version() -> str:
@@ -302,6 +311,9 @@ def _make_data_url(name: str, version: str = "") -> str:
 
     assert name in DATASETS
 
+    if version in ["v0.0.2", "v0.0.3"]:
+        logging.warning("Versions v0.0.2, v0.0.3 will be deprecated in the future.")
+        return OLD_VERSION_URL.format(archive=name, version=version)
     if not version:
         version = LATEST_VERSION
     return VERSION_URL.format(archive=name, version=version)
