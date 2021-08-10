@@ -613,6 +613,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#v011-2021-08-10" class="md-nav__link">
+    v0.1.1 - 2021-08-10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#v010-2021-07-21" class="md-nav__link">
     v0.1.0 - 2021-07-21
   </a>
@@ -666,6 +673,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#v011-2021-08-10" class="md-nav__link">
+    v0.1.1 - 2021-08-10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#v010-2021-07-21" class="md-nav__link">
     v0.1.0 - 2021-07-21
   </a>
@@ -696,6 +710,37 @@
                 
                 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
 <h2 id="pre-alpha">Pre-Alpha<a class="headerlink" href="#pre-alpha" title="Permanent link">&para;</a></h2>
+<h3 id="v011-2021-08-10">v0.1.1 - 2021-08-10<a class="headerlink" href="#v011-2021-08-10" title="Permanent link">&para;</a></h3>
+<p>Software Changes:</p>
+<ul>
+<li>Bump default dataset version: <code>v0.0.3</code> → <code>v0.0.4</code>.</li>
+<li>Between <code>v0.0.3</code> and <code>v0.0.4</code> of <code>srlearn/datasets</code>, all zipfiles now have the version number appended
+  (e.g. <code>toy_cancer_v0.0.4.zip</code>). Add logic to request the correct filename from GitHub.</li>
+<li>Add <code>deserialize_zipfile</code> function, split out code for pulling zipfile content from the <code>load</code> method.</li>
+<li>Add private <code>_make_file_path</code> function to handle where zipfiles are stored on a user's filesystem.</li>
+<li>Move <code>RelationalDataset</code> type into <code>relational_datasets/types.py</code></li>
+<li>Fix <code>hayesall/relational_datasets</code> → <code>srlearn/relational_datasets</code> in <code>setup.py</code></li>
+<li>Clarify <code>typing.Optional</code> in function signatures where default file paths are allowed.</li>
+<li>Add <code>__version__</code> to the main <code>__init__</code>, so <code>print(relational_datasets.__version__)</code> is valid.</li>
+</ul>
+<p>Documentation:</p>
+<ul>
+<li>Add <code>mkdocs</code> builds with each push to the <code>main</code> branch.</li>
+<li>Add <code>requirements_dev.txt</code> with requirements to build documentation.</li>
+<li>Add <code>docs/build._docs.py</code> to build a <em>Downloads</em> page and an overview of each dataset pulled from the <code>srlearn/datasets</code> repository.</li>
+<li>Add <code>docs/notebooks/</code> directory for literate tutorials<ul>
+<li>Add <code>00_loading_and_fetching.ipynb</code></li>
+</ul>
+</li>
+<li>Pages for functions and types:<ul>
+<li><code>types.RelationalDataset</code></li>
+<li><code>request.deserialize_zipfile</code></li>
+<li><code>request.fetch</code></li>
+<li><code>request.latest_version</code></li>
+<li><code>request.load</code></li>
+</ul>
+</li>
+</ul>
 <h3 id="v010-2021-07-21">v0.1.0 - 2021-07-21<a class="headerlink" href="#v010-2021-07-21" title="Permanent link">&para;</a></h3>
 <p>Release basic specification:</p>
 <ul>
@@ -713,7 +758,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 24, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 10, 2021</span>
       
     
   </small>
