@@ -5,7 +5,6 @@
 Custom Types
 """
 
-from collections import namedtuple
 from typing import List, NamedTuple
 
 __all__ = ["RelationalDataset"]
