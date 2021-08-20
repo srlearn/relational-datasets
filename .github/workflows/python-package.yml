@@ -38,6 +38,12 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest --cov=relational_datasets/ relational_datasets/
+        pytest --cov=relational_datasets/ --cov-report=xml relational_datasets/
     - name: Upload reports to Codecov
       uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        env_vars: matrix.os,matrix.version
+        fail_ci_if_error: true
+        files: ./coverage.xml
+        flags: unittests
