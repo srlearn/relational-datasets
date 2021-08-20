@@ -9,6 +9,7 @@ pip install relational-datasets
 [![PyPi Version](https://img.shields.io/pypi/v/relational-datasets)](https://pypi.org/project/relational-datasets/)
 [![License](https://img.shields.io/github/license/srlearn/relational-datasets)](https://github.com/srlearn/relational-datasets/blob/main/LICENSE)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/srlearn/relational-datasets.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/srlearn/relational-datasets/alerts/)
+[![codecov](https://codecov.io/gh/srlearn/relational-datasets/branch/main/graph/badge.svg?token=lutvcUSBRF)](https://codecov.io/gh/srlearn/relational-datasets)
 [![Python Package Builds](https://github.com/srlearn/relational-datasets/actions/workflows/python-package.yml/badge.svg)](https://github.com/srlearn/relational-datasets/actions/workflows/python-package.yml)
 [![Documentation Deploy](https://github.com/srlearn/relational-datasets/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/srlearn/relational-datasets/actions/workflows/deploy-docs.yml)
 
