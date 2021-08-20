@@ -1,5 +1,9 @@
 pytest
 pytest-cov
+
+# numpy type annotations are available after 1.20
+numpy>=1.20.0
+
 mkdocs
 mkdocs-material
 mkdocs-git-revision-date-localized-plugin

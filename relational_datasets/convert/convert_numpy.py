@@ -1,15 +1,17 @@
 # Copyright © 2021 Alexander L. Hayes
+# Apache 2.0 License
 
-"""
-Convert standard machine learning datasets into a relational format.
+"""Convert vector-based ML datasets to tuple-based ILP datasets.
 """
 
 from typing import List, Tuple, Optional
 
-from .types import RelationalDataset
+import numpy as np
+
+from ..types import RelationalDataset
 
 
-def _get_task(y: 'np.ndarray') -> str:
+def _get_task(y: np.ndarray) -> str:
     """Return classification/regression"""
 
     if str(y.dtype) == 'int64':
@@ -19,7 +21,7 @@ def _get_task(y: 'np.ndarray') -> str:
     raise TypeError("Could not determine classification or regression from `y`")
 
 
-def from_numpy(X: 'np.ndarray', y: 'np.ndarray', names: Optional[List[str]] = None) -> Tuple[RelationalDataset, List[str]]:
+def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) -> Tuple[RelationalDataset, List[str]]:
     """Convert a pair of numpy data (X) and target (y) arrays to a
     RelationalDataset"""
 

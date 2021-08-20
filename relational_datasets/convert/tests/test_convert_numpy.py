@@ -1,6 +1,7 @@
 # Copyright © 2021 Alexander L. Hayes
+# Apache 2.0 License
 
-"""Tests for the `convert` module
+"""Tests for the `convert_numpy` module
 """
 
 import pytest
@@ -11,6 +12,7 @@ from relational_datasets.convert import from_numpy
 
 
 def test_convert_numpy_classification():
+    """Test converting a classification problem."""
     X = numpy.array([[0, 1, 1], [1, 0, 2], [2, 2, 0]])
     y = numpy.array([0, 0, 1])
     data, modes = from_numpy(X, y)
@@ -41,6 +43,7 @@ def test_convert_numpy_classification():
     ]
 
 def test_convert_numpy_regression():
+    """Test converting a regression problem."""
     X = numpy.array([[0, 1, 1], [1, 0, 2], [2, 2, 0]])
     y = numpy.array([0.1, 0.2, 0.3])
     data, modes = from_numpy(X, y)

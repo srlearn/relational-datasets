@@ -61,6 +61,67 @@ print(len(train.facts))
 # 1344
 ```
 
+## Use Case 3: Working with Standard (Vector-based) Machine Learning Datasets
+
+The `relational_datasets.convert` module has functions for
+converting vector-based datasets into relational/ILP-style
+datasets:
+
+### Binary Classification
+
+*When `y` is a vector of 0/1*
+
+```python
+from relational_datasets.convert import from_numpy
+import numpy as np
+
+X = np.array([[0, 1, 1], [0, 1, 2], [1, 2, 2]])
+y = np.array([0, 0, 1])
+
+data, modes = from_numpy(X, y)
+```
+
+### Regression
+
+*When `y` is a vector of floats*
+
+```python
+from relational_datasets.convert import from_numpy
+import numpy as np
+
+X = np.array([[0, 1, 1], [0, 1, 2], [1, 2, 2]])
+y = np.array([1.1, 0.9, 2.5])
+
+data, modes = from_numpy(X, y)
+```
+
+### Example using scikit-learn's `load_breast_cancer`
+
+"Breast Cancer" is based on the Breast Cancer Wisconsin
+dataset.
+
+```python
+from sklearn.datasets import load_breast_cancer
+from sklearn.preprocessing import KBinsDiscretizer
+from sklearn.model_selection import train_test_split
+
+X, y = load_breast_cancer(return_X_y=True)
+
+# Discretize continuous features into ordinal categories:
+disc = KBinsDiscretizer(n_bins=5, encode="ordinal")
+X = disc.fit_transform(X)
+X = X.astype(int)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+# ---
+
+from relational_datasets.convert import from_numpy
+
+train, modes = from_numpy(X_train, y_train)
+test, _ = from_numpy(X_test, y_test)
+```
+
 ## Install
 
 ### From PyPi
