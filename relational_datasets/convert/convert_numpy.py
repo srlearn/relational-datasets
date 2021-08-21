@@ -18,7 +18,7 @@ def _get_task(y: np.ndarray) -> str:
         return 'classification'
     elif str(y.dtype) == 'float64':
         return 'regression'
-    raise TypeError("Could not determine classification or regression from `y`")
+    raise TypeError("Could not determine classification or regression from `y` with type: " + str(y.dtype))
 
 
 def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) -> Tuple[RelationalDataset, List[str]]:
@@ -28,15 +28,17 @@ def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) 
     # TODO(hayesall): All `enumerate` calls start from `1` to maintain
     #   parity with Julia module.
 
+    # TODO(hayesall): This is a way to "fail fast": if we cannot determine
+    #   type of the `y` vector, the conversion is not possible.
+    _task = _get_task(y)
+
     if not names:
         # + 2 to start from 1.
         names = [f"v{i}" for i in range(1, X.shape[1] + 2)]
 
     pos, neg, facts = [], [], []
 
-    # TODO(hayesall): This is a way to "fail fast": if we cannot determine
-    #   type of the `y` vector, the conversion is not possible.
-    if _get_task(y) == "classification":
+    if _task == "classification":
         for i, row in enumerate(y, 1):
             if row:
                 pos.append(f"{names[-1]}(id{i}).")
