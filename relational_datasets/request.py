@@ -293,7 +293,7 @@ def fetch(name: str, version: Optional[str] = None) -> str:
     return str(data_file)
 
 
-def _make_file_path(name: str, version: str = ""):
+def _make_file_path(name: str, version: Optional[str] = "") -> pathlib.Path:
     """Create a file path where data are stored.
 
     If a `version` is not provided, the `LATEST_VERSION` is used.
@@ -303,7 +303,7 @@ def _make_file_path(name: str, version: str = ""):
     return pathlib.Path(get_data_home()).joinpath(f"{name}_{version}.zip")
 
 
-def _make_data_url(name: str, version: str = "") -> str:
+def _make_data_url(name: str, version: Optional[str] = "") -> str:
     """Create a URL for a dataset with ``name`` and ``version``.
 
     If a ``version`` is not provided, the latest version is returned.

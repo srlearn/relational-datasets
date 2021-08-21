@@ -55,6 +55,6 @@ Examples:
     ```
 ---
 """
-RelationalDataset.pos.__doc__ += ": List of positive examples"
-RelationalDataset.neg.__doc__ += ": List of negative examples"
-RelationalDataset.facts.__doc__ += ": List of facts for the domain"
+RelationalDataset.pos.__doc__ = ": List of positive examples"
+RelationalDataset.neg.__doc__ = ": List of negative examples"
+RelationalDataset.facts.__doc__ = ": List of facts for the domain"
