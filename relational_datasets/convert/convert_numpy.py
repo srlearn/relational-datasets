@@ -14,9 +14,9 @@ from ..types import RelationalDataset
 def _get_task(y: np.ndarray) -> str:
     """Return classification/regression"""
 
-    if str(y.dtype) == 'int64':
+    if str(y.dtype)[:3] == 'int':
         return 'classification'
-    elif str(y.dtype) == 'float64':
+    elif str(y.dtype)[:5] == 'float':
         return 'regression'
     raise TypeError("Could not determine classification or regression from `y` with type: " + str(y.dtype))
 
@@ -24,6 +24,8 @@ def _get_task(y: np.ndarray) -> str:
 def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) -> Tuple[RelationalDataset, List[str]]:
     """Convert a pair of numpy data (X) and target (y) arrays to a
     RelationalDataset"""
+
+    assert X.shape[0] == y.shape[0]
 
     # TODO(hayesall): All `enumerate` calls start from `1` to maintain
     #   parity with Julia module.
