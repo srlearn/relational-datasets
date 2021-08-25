@@ -48,6 +48,7 @@ nav:
   - API Docs:
     - request.load: api/request.load.md
     - request.fetch: api/request.fetch.md
+    - convert.from_numpy: api/convert.from_numpy.md
     - types.RelationalDataset: api/relationaldataset.md
     - Unstable:
       - request.deserialize_zipfile: api/request.deserialize_zipfile.md
@@ -56,4 +57,5 @@ nav:
   - ... | dataset_descriptions/*.md
   - Notebooks:
     - "Fetching": notebooks/00_loading_and_fetching.ipynb
+    - "Converting Vector Datasets": notebooks/01_converting_propositional_datasets.ipynb
   - Changelog: changelog.md
