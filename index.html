@@ -415,6 +415,18 @@
   
   
     <li class="md-nav__item">
+      <a href="api/convert.from_numpy/" class="md-nav__link">
+        convert.from_numpy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="api/relationaldataset/" class="md-nav__link">
         types.RelationalDataset
       </a>
@@ -430,14 +442,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
-      <label class="md-nav__link" for="__nav_2_4">
+      <label class="md-nav__link" for="__nav_2_5">
         Unstable
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Unstable" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_4">
+        <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           Unstable
         </label>
@@ -680,6 +692,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="notebooks/01_converting_propositional_datasets/" class="md-nav__link">
+        Converting machine learning benchmark datasets
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -855,21 +879,21 @@ are currently being experimented with.</p>
 <li><a href="https://github.com/srlearn/datasets/issues">Issues: datasets</a></li>
 </ul>
 <p>But here is a short-term Roadmap:</p>
-<ul>
-<li>[ ] Modes: https://github.com/srlearn/datasets/issues/11</li>
-<li>[ ] Converting propositional-&gt;relational</li>
-<li>[ ] Problem Settings<ul>
-<li>[X] Binary Classification</li>
-<li>[X] Classification: (0, 1)</li>
-<li>[ ] Classification: (-1, 1)</li>
-<li>[ ] Classification: maybe recommend <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html"><code>sklearn.preprocessing.LabelBinarizer</code></a></li>
-<li>[X] Regression</li>
-<li>[X] Regression: y ∈ <code>float</code></li>
-<li>[ ] Multiclass Classification: When target is <code>int</code> and in <code>[0, 1, 2, ...]</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Modes: <a href="https://github.com/srlearn/datasets/issues/11">srlearn/datasets: Issue 11</a></li>
+<li class="task-list-item"><input type="checkbox" disabled/> Converting propositional-&gt;relational</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Problem Settings<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> Binary Classification</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Classification: (0, 1)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Classification: (-1, 1)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Classification: maybe recommend <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelBinarizer.html"><code>sklearn.preprocessing.LabelBinarizer</code></a></li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Regression</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> Regression: y ∈ <code>float</code></li>
+<li class="task-list-item"><input type="checkbox" disabled/> Multiclass Classification: When target is <code>int</code> and in <code>[0, 1, 2, ...]</code></li>
 </ul>
 </li>
-<li>[ ] Categorical datatype support in <code>X</code> matrix.</li>
-<li>[ ] Dataframes: <code>pandas</code></li>
+<li class="task-list-item"><input type="checkbox" disabled/> Categorical datatype support in <code>X</code> matrix.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Dataframes: <code>pandas</code></li>
 </ul>
 <h2 id="use-case-1-fetching-zipfiles">Use Case 1: Fetching Zipfiles<a class="headerlink" href="#use-case-1-fetching-zipfiles" title="Permanent link">&para;</a></h2>
 <p><strong>Running</strong> the <code>fetch</code> method downloads a version of a datset to your local cache:</p>

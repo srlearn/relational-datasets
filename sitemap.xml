@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://srlearn.github.io/relational-datasets/api/convert.from_numpy/</loc>
+         <lastmod>2021-08-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://srlearn.github.io/relational-datasets/api/relationaldataset/</loc>
          <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
@@ -97,6 +102,11 @@
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/notebooks/00_loading_and_fetching/</loc>
+         <lastmod>2021-08-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://srlearn.github.io/relational-datasets/notebooks/01_converting_propositional_datasets/</loc>
          <lastmod>2021-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>

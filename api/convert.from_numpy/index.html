@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://srlearn.github.io/relational-datasets/dataset_descriptions/financial_nlp_small/">
+        <link rel="canonical" href="https://srlearn.github.io/relational-datasets/api/convert.from_numpy/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
     
     
       
-        <title>financial_nlp_small - relational-datasets</title>
+        <title>convert.from_numpy - relational-datasets</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#financial_nlp_small" class="md-skip">
+        <a href="#requestconvert" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              financial_nlp_small
+              convert.from_numpy
             
           </span>
         </div>
@@ -246,12 +246,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         API Docs
@@ -269,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/request.load/" class="md-nav__link">
+      <a href="../request.load/" class="md-nav__link">
         request.load
       </a>
     </li>
@@ -281,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/request.fetch/" class="md-nav__link">
+      <a href="../request.fetch/" class="md-nav__link">
         request.fetch
       </a>
     </li>
@@ -291,11 +293,58 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../api/convert.from_numpy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          convert.from_numpy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         convert.from_numpy
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#relational_datasets.convert.convert_numpy" class="md-nav__link">
+    relational_datasets.convert.convert_numpy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relational_datasets.convert.convert_numpy.from_numpy" class="md-nav__link">
+    from_numpy()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -305,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/relationaldataset/" class="md-nav__link">
+      <a href="../relationaldataset/" class="md-nav__link">
         types.RelationalDataset
       </a>
     </li>
@@ -338,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/request.deserialize_zipfile/" class="md-nav__link">
+      <a href="../request.deserialize_zipfile/" class="md-nav__link">
         request.deserialize_zipfile
       </a>
     </li>
@@ -350,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/request.latest_version/" class="md-nav__link">
+      <a href="../request.latest_version/" class="md-nav__link">
         request.latest_version
       </a>
     </li>
@@ -390,14 +439,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         Dataset descriptions
@@ -415,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../boston_housing/" class="md-nav__link">
+      <a href="../../dataset_descriptions/boston_housing/" class="md-nav__link">
         boston_housing
       </a>
     </li>
@@ -427,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../citeseer/" class="md-nav__link">
+      <a href="../../dataset_descriptions/citeseer/" class="md-nav__link">
         citeseer
       </a>
     </li>
@@ -439,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cora/" class="md-nav__link">
+      <a href="../../dataset_descriptions/cora/" class="md-nav__link">
         cora
       </a>
     </li>
@@ -449,58 +496,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          financial_nlp_small
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dataset_descriptions/financial_nlp_small/" class="md-nav__link">
         financial_nlp_small
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
-    Task
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publications" class="md-nav__link">
-    Publications
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -510,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../icml/" class="md-nav__link">
+      <a href="../../dataset_descriptions/icml/" class="md-nav__link">
         icml
       </a>
     </li>
@@ -522,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nell_sports/" class="md-nav__link">
+      <a href="../../dataset_descriptions/nell_sports/" class="md-nav__link">
         nell_sports
       </a>
     </li>
@@ -534,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../toy_cancer/" class="md-nav__link">
+      <a href="../../dataset_descriptions/toy_cancer/" class="md-nav__link">
         toy_cancer
       </a>
     </li>
@@ -546,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../toy_father/" class="md-nav__link">
+      <a href="../../dataset_descriptions/toy_father/" class="md-nav__link">
         toy_father
       </a>
     </li>
@@ -558,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../uwcse/" class="md-nav__link">
+      <a href="../../dataset_descriptions/uwcse/" class="md-nav__link">
         uwcse
       </a>
     </li>
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../webkb/" class="md-nav__link">
+      <a href="../../dataset_descriptions/webkb/" class="md-nav__link">
         webkb
       </a>
     </li>
@@ -678,15 +678,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#task" class="md-nav__link">
-    Task
+  <a href="#relational_datasets.convert.convert_numpy" class="md-nav__link">
+    relational_datasets.convert.convert_numpy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publications" class="md-nav__link">
-    Publications
+  <a href="#relational_datasets.convert.convert_numpy.from_numpy" class="md-nav__link">
+    from_numpy()
   </a>
   
 </li>
@@ -703,21 +703,208 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/srlearn/relational-datasets/blob/main/docs/dataset_descriptions/financial_nlp_small.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/srlearn/relational-datasets/blob/main/docs/api/convert.from_numpy.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="financial_nlp_small">financial_nlp_small<a class="headerlink" href="#financial_nlp_small" title="Permanent link">&para;</a></h1>
-<p>"Financial NLP Small" started with sentences from company initial public
-offering documents (IPO SEC Form S-1) that were converted to relational facts
-with <a href="https://github.com/hayesall/rnlp/"><code>rnlp</code></a>.</p>
-<h2 id="task">Task<a class="headerlink" href="#task" title="Permanent link">&para;</a></h2>
-<p><strong>Binary Classification</strong>: Is the sentence a primary share?</p>
-<h2 id="publications">Publications<a class="headerlink" href="#publications" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Dhami, D.S., &amp; Kunapuli, G., &amp; Natarajan, S., Efficient Learning of Relational Gaifman Models using Probabilistic Logic, Workshop on Probabilistic Logic Programming (PLP) 2019.</li>
-</ul>
+                <h1 id="requestconvert"><code>request.convert</code><a class="headerlink" href="#requestconvert" title="Permanent link">&para;</a></h1>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="relational_datasets.convert.convert_numpy"></a>
+    <div class="doc doc-contents first">
+
+      <p>Convert vector-based ML datasets to tuple-based ILP datasets.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="relational_datasets.convert.convert_numpy.from_numpy" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">from_numpy</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+<a href="#relational_datasets.convert.convert_numpy.from_numpy" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Convert numpy data (<code>X</code>) and target (<code>y</code>) arrays to a RelationalDataset
+with modes.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>X</code></td>
+        <td><code>ndarray</code></td>
+        <td><p>Integer matrix of covariates</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>y</code></td>
+        <td><code>ndarray</code></td>
+        <td><p>Integer or float array containing the target variable</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>names</code></td>
+        <td><code>Optional[List[str]]</code></td>
+        <td><p>List of strings representing the variable names</p></td>
+        <td><code>None</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Tuple[relational_datasets.types.RelationalDataset, List[str]]</code></td>
+      <td><p>Tuple of <code>RelationalDataset</code> and a list of strings containing the modes</p></td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Exceptions:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>TypeError</code></td>
+        <td><p>When classification vs. regression cannot be determined from
+the types of the input values.</p></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    
+      <p>Demonstrates converting a set of binary classification data.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">relational_datasets.convert</span> <span class="kn">import</span> <span class="n">from_numpy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">data</span><span class="p">,</span> <span class="n">modes</span> <span class="o">=</span> <span class="n">from_numpy</span><span class="p">(</span>
+  <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]),</span>
+  <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
+<span class="p">)</span>
+</code></pre></div>
+
+        <details class="quote">
+          <summary>Source code in <code>relational_datasets/convert/convert_numpy.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">from_numpy</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">RelationalDataset</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+    <span class="sd">&quot;&quot;&quot;Convert numpy data (`X`) and target (`y`) arrays to a RelationalDataset</span>
+<span class="sd">    with modes.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">        X: Integer matrix of covariates</span>
+<span class="sd">        y: Integer or float array containing the target variable</span>
+<span class="sd">        names: List of strings representing the variable names</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Tuple of `RelationalDataset` and a list of strings containing the modes</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: When classification vs. regression cannot be determined from</span>
+<span class="sd">            the types of the input values.</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    Demonstrates converting a set of binary classification data.</span>
+
+<span class="sd">    ```python</span>
+<span class="sd">    from relational_datasets.convert import from_numpy</span>
+<span class="sd">    import numpy as np</span>
+
+<span class="sd">    data, modes = from_numpy(</span>
+<span class="sd">      np.array([[0, 1, 1], [0, 1, 2], [1, 2, 2]]),</span>
+<span class="sd">      np.array([0, 0, 1]),</span>
+<span class="sd">    )</span>
+<span class="sd">    ```</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">assert</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># TODO(hayesall): All `enumerate` calls start from `1` to maintain</span>
+    <span class="c1">#   parity with Julia module.</span>
+
+    <span class="c1"># TODO(hayesall): This is a way to &quot;fail fast&quot;: if we cannot determine</span>
+    <span class="c1">#   type of the `y` vector, the conversion is not possible.</span>
+    <span class="n">_task</span> <span class="o">=</span> <span class="n">_get_task</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">names</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">==</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># + 2 to start from 1.</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;v</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)]</span>
+
+    <span class="n">pos</span><span class="p">,</span> <span class="n">neg</span><span class="p">,</span> <span class="n">facts</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+
+    <span class="k">if</span> <span class="n">_task</span> <span class="o">==</span> <span class="s2">&quot;classification&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">row</span><span class="p">:</span>
+                <span class="n">pos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">(id</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">neg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">(id</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># _get_task(y) == &quot;regression&quot;</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">pos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;regressionExample(</span><span class="si">{</span><span class="n">names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">(id</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">),</span><span class="si">{</span><span class="n">row</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">):</span>
+        <span class="n">var</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">facts</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">(id</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">row</span><span class="si">}</span><span class="s2">).&quot;</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+
+    <span class="n">modes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">(+id,#var</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">).&quot;</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="n">modes</span> <span class="o">+=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">names</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">(+id).&quot;</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">RelationalDataset</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">neg</span><span class="o">=</span><span class="n">neg</span><span class="p">,</span> <span class="n">facts</span><span class="o">=</span><span class="n">facts</span><span class="p">),</span> <span class="n">modes</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
                 
                   
                     
@@ -756,7 +943,7 @@ with <a href="https://github.com/hayesall/rnlp/"><code>rnlp</code></a>.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../cora/" class="md-footer__link md-footer__link--prev" aria-label="Previous: cora" rel="prev">
+        <a href="../request.fetch/" class="md-footer__link md-footer__link--prev" aria-label="Previous: request.fetch" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -765,20 +952,20 @@ with <a href="https://github.com/hayesall/rnlp/"><code>rnlp</code></a>.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              cora
+              request.fetch
             </div>
           </div>
         </a>
       
       
         
-        <a href="../icml/" class="md-footer__link md-footer__link--next" aria-label="Next: icml" rel="next">
+        <a href="../relationaldataset/" class="md-footer__link md-footer__link--next" aria-label="Next: types.RelationalDataset" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              icml
+              types.RelationalDataset
             </div>
           </div>
           <div class="md-footer__button md-icon">

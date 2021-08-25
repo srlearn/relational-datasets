@@ -11,21 +11,21 @@
       
       
       
-        <link rel="canonical" href="https://srlearn.github.io/relational-datasets/build_docs/">
+        <link rel="canonical" href="https://srlearn.github.io/relational-datasets/notebooks/01_converting_propositional_datasets/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
     
     
       
-        <title>Copyright © 2021 Alexander L. Hayes - relational-datasets</title>
+        <title>Converting machine learning benchmark datasets - relational-datasets</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.be71726b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.be71726b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -40,7 +40,7 @@
     
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
     
       
@@ -61,7 +61,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#converting-machine-learning-benchmark-datasets" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +82,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="relational-datasets" class="md-header__button md-logo" aria-label="relational-datasets" data-md-component="logo">
+    <a href="../.." title="relational-datasets" class="md-header__button md-logo" aria-label="relational-datasets" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Copyright © 2021 Alexander L. Hayes
+              Converting machine learning benchmark datasets
             
           </span>
         </div>
@@ -196,7 +201,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="relational-datasets" class="md-nav__button md-logo" aria-label="relational-datasets" data-md-component="logo">
+    <a href="../.." title="relational-datasets" class="md-nav__button md-logo" aria-label="relational-datasets" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -228,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -264,7 +269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/request.load/" class="md-nav__link">
+      <a href="../../api/request.load/" class="md-nav__link">
         request.load
       </a>
     </li>
@@ -276,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/request.fetch/" class="md-nav__link">
+      <a href="../../api/request.fetch/" class="md-nav__link">
         request.fetch
       </a>
     </li>
@@ -288,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/convert.from_numpy/" class="md-nav__link">
+      <a href="../../api/convert.from_numpy/" class="md-nav__link">
         convert.from_numpy
       </a>
     </li>
@@ -300,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/relationaldataset/" class="md-nav__link">
+      <a href="../../api/relationaldataset/" class="md-nav__link">
         types.RelationalDataset
       </a>
     </li>
@@ -333,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/request.deserialize_zipfile/" class="md-nav__link">
+      <a href="../../api/request.deserialize_zipfile/" class="md-nav__link">
         request.deserialize_zipfile
       </a>
     </li>
@@ -345,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/request.latest_version/" class="md-nav__link">
+      <a href="../../api/request.latest_version/" class="md-nav__link">
         request.latest_version
       </a>
     </li>
@@ -372,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../downloads/" class="md-nav__link">
+      <a href="../../downloads/" class="md-nav__link">
         Downloads
       </a>
     </li>
@@ -408,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/boston_housing/" class="md-nav__link">
+      <a href="../../dataset_descriptions/boston_housing/" class="md-nav__link">
         boston_housing
       </a>
     </li>
@@ -420,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/citeseer/" class="md-nav__link">
+      <a href="../../dataset_descriptions/citeseer/" class="md-nav__link">
         citeseer
       </a>
     </li>
@@ -432,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/cora/" class="md-nav__link">
+      <a href="../../dataset_descriptions/cora/" class="md-nav__link">
         cora
       </a>
     </li>
@@ -444,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/financial_nlp_small/" class="md-nav__link">
+      <a href="../../dataset_descriptions/financial_nlp_small/" class="md-nav__link">
         financial_nlp_small
       </a>
     </li>
@@ -456,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/icml/" class="md-nav__link">
+      <a href="../../dataset_descriptions/icml/" class="md-nav__link">
         icml
       </a>
     </li>
@@ -468,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/nell_sports/" class="md-nav__link">
+      <a href="../../dataset_descriptions/nell_sports/" class="md-nav__link">
         nell_sports
       </a>
     </li>
@@ -480,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/toy_cancer/" class="md-nav__link">
+      <a href="../../dataset_descriptions/toy_cancer/" class="md-nav__link">
         toy_cancer
       </a>
     </li>
@@ -492,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/toy_father/" class="md-nav__link">
+      <a href="../../dataset_descriptions/toy_father/" class="md-nav__link">
         toy_father
       </a>
     </li>
@@ -504,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/uwcse/" class="md-nav__link">
+      <a href="../../dataset_descriptions/uwcse/" class="md-nav__link">
         uwcse
       </a>
     </li>
@@ -516,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset_descriptions/webkb/" class="md-nav__link">
+      <a href="../../dataset_descriptions/webkb/" class="md-nav__link">
         webkb
       </a>
     </li>
@@ -535,12 +540,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
         Notebooks
@@ -558,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../notebooks/00_loading_and_fetching/" class="md-nav__link">
+      <a href="../00_loading_and_fetching/" class="md-nav__link">
         Fetching and Loading Data
       </a>
     </li>
@@ -568,11 +575,106 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../notebooks/01_converting_propositional_datasets/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Converting machine learning benchmark datasets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Converting machine learning benchmark datasets
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#binary-classification" class="md-nav__link">
+    Binary Classification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regression" class="md-nav__link">
+    Regression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#side-note-naming-variables" class="md-nav__link">
+    Side Note: Naming Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-with-scikit-learns-load_breast_cancer" class="md-nav__link">
+    Worked example with scikit-learn's load_breast_cancer
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked example with scikit-learn's load_breast_cancer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-load-the-data-target-and-variable-names" class="md-nav__link">
+    (1) Load the data, target, and variable names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-split-out-training-and-test-sets" class="md-nav__link">
+    (2) Split out training and test sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-discretize-continuous-features-to-discrete" class="md-nav__link">
+    (3) Discretize continuous features to discrete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-convert-arrays-to-relationaldataset" class="md-nav__link">
+    (4) Convert arrays to RelationalDataset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -591,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../../changelog/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -605,17 +707,102 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#binary-classification" class="md-nav__link">
+    Binary Classification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regression" class="md-nav__link">
+    Regression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#side-note-naming-variables" class="md-nav__link">
+    Side Note: Naming Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-with-scikit-learns-load_breast_cancer" class="md-nav__link">
+    Worked example with scikit-learn's load_breast_cancer
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked example with scikit-learn's load_breast_cancer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-load-the-data-target-and-variable-names" class="md-nav__link">
+    (1) Load the data, target, and variable names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-split-out-training-and-test-sets" class="md-nav__link">
+    (2) Split out training and test sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-discretize-continuous-features-to-discrete" class="md-nav__link">
+    (3) Discretize continuous features to discrete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-convert-arrays-to-relationaldataset" class="md-nav__link">
+    (4) Convert arrays to RelationalDataset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/srlearn/relational-datasets/blob/main/docs/build_docs.py" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/srlearn/relational-datasets/blob/main/docs/notebooks/01_converting_propositional_datasets.ipynb" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
-                
-                  <h1>Copyright © 2021 Alexander L. Hayes</h1>
                 
                 <style type="text/css">
     
@@ -1119,34 +1306,21 @@ all of MD as it is not optimized for dense, information rich UIs.
     <!-- End of mathjax configuration --><div class="jupyter-wrapper">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Copyright © 2021 Alexander L. Hayes
-Apache 2.0 License</p>
+<h1 id="converting-machine-learning-benchmark-datasets">Converting machine learning benchmark datasets<a class="anchor-link" href="#Converting-machine-learning-benchmark-datasets">&#182;</a></h1><p><a href="https://hayesall.com">Alexander L. Hayes</a>: <em>Ph.D. Student, Indiana University</em>.</p>
+<p><strong>Abstract</strong>: Most benchmark machine learning datasets have a <em>vector-based representation</em>, where we have a single type of object (people, images, houses) and we learn an <em>attribute</em> of those objects (disease risk, cat/dog, median price). This tutorial bridges the gap between vector-based machine learning and relational machine learning, and shows how to view the former in terms of the latter.</p>
+<p>Examples in this notebook are provided as documentation, and are available under the terms of the Apache 2.0 License.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
-    <div class="highlight-ipynb hl-python"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># Build Docs</span>
-
-<span class="sd">Build the documentation, which includes *pulling data from GitHub.*</span>
-
-<span class="sd">## Usage</span>
-
-<span class="sd">This requires that the `GH_TOKEN` is set with a valid GitHub OAuth token.</span>
-<span class="sd">https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication</span>
-
-<span class="sd">```bash</span>
-<span class="sd">cd docs/</span>
-<span class="sd">export GH_TOKEN=your_token</span>
-<span class="sd">python build_docs.py</span>
-<span class="sd">```</span>
-<span class="sd">&quot;&quot;&quot;</span>
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">relational_datasets.convert</span> <span class="kn">import</span> <span class="n">from_numpy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
         </div>
@@ -1155,19 +1329,24 @@ Apache 2.0 License</p>
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="binary-classification">Binary Classification<a class="anchor-link" href="#Binary-Classification">&#182;</a></h2><p>We're in a binary classification setting when the target array <code>y</code> contains 0/1 integers.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
-    <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span>
-<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">Request</span>
-<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train</span><span class="p">,</span> <span class="n">modes</span> <span class="o">=</span> <span class="n">from_numpy</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
+<span class="p">)</span>
 </pre></div>
 
         </div>
@@ -1176,16 +1355,15 @@ Apache 2.0 License</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
-    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">TOKEN</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span><span class="s2">&quot;GH_TOKEN&quot;</span><span class="p">]</span>
-<span class="n">AUTHORIZATION</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;token </span><span class="si">{</span><span class="n">TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">pos</span>
 </pre></div>
 
         </div>
@@ -1194,35 +1372,38 @@ Apache 2.0 License</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;v4(id3).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
-    <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">build_dataset_descriptions</span><span class="p">():</span>
-
-    <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
-        <span class="s2">&quot;https://api.github.com/repos/srlearn/datasets/releases/latest&quot;</span><span class="p">,</span>
-        <span class="n">headers</span><span class="o">=</span><span class="n">AUTHORIZATION</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="k">as</span> <span class="n">url</span><span class="p">:</span>
-        <span class="n">latest</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
-
-    <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">latest</span><span class="p">[</span><span class="s2">&quot;assets&quot;</span><span class="p">]:</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_v&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-
-        <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;https://raw.githubusercontent.com/srlearn/datasets/main/srlearn/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">/README.md&quot;</span><span class="p">,</span>
-            <span class="n">headers</span><span class="o">=</span><span class="n">AUTHORIZATION</span><span class="p">,</span>
-        <span class="p">)</span>
-
-        <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="k">as</span> <span class="n">url</span><span class="p">:</span>
-            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dataset_descriptions/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.md&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
-                <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">neg</span>
 </pre></div>
 
         </div>
@@ -1231,70 +1412,45 @@ Apache 2.0 License</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;v4(id1).&#39;, &#39;v4(id2).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here we are learning from a collection of <strong>one type of object</strong>. Since there is only one type of object, we can enumerate them with an <code>id</code>.</p>
+<p>The <em>positive examples</em> show that the object with <code>id3</code> is a positive instance of a class, and the <em>negative examples</em> show that objects <code>id1</code> and <code>id2</code> are not instances of this class.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
-    <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">build_downloads_page</span><span class="p">():</span>
-
-    <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
-        <span class="s2">&quot;https://api.github.com/repos/srlearn/datasets/git/refs/tags&quot;</span><span class="p">,</span>
-        <span class="n">headers</span><span class="o">=</span><span class="n">AUTHORIZATION</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="k">as</span> <span class="n">url</span><span class="p">:</span>
-        <span class="n">all_tags</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
-
-        <span class="c1"># The response is formatted as {&#39;ref&#39;: &#39;refs/tags/v0.0.1&#39;, ...}</span>
-        <span class="c1"># so we taken the last item after splitting on &#39;/&#39; to get version numbers.</span>
-        <span class="n">all_versions</span> <span class="o">=</span> <span class="p">[</span><span class="n">tag</span><span class="p">[</span><span class="s2">&quot;ref&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">all_tags</span><span class="p">]</span>
-        <span class="n">all_versions</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-
-    <span class="n">markdown_string</span> <span class="o">=</span> <span class="s2">&quot;# Download Datasets</span><span class="se">\n\n</span><span class="s2">&quot;</span>
-    <span class="n">markdown_string</span> <span class="o">+=</span> <span class="p">(</span>
-        <span class="s2">&quot;Download links for each dataset and version are listed here:</span><span class="se">\n\n</span><span class="s2">&quot;</span>
-    <span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">version</span> <span class="ow">in</span> <span class="n">all_versions</span><span class="p">:</span>
-
-        <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;https://api.github.com/repos/srlearn/datasets/releases/tags/</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-            <span class="n">headers</span><span class="o">=</span><span class="n">AUTHORIZATION</span><span class="p">,</span>
-        <span class="p">)</span>
-
-        <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="k">as</span> <span class="n">url</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
-
-        <span class="c1"># I like timestamps</span>
-        <span class="n">stamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;published_at&quot;</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-        <span class="n">markdown_string</span> <span class="o">+=</span> <span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;## Version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">stamp</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">stamp</span><span class="o">.</span><span class="n">month</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">stamp</span><span class="o">.</span><span class="n">day</span><span class="si">}</span><span class="s2">)</span><span class="se">\n\n</span><span class="s2">&quot;</span>
-        <span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;assets&quot;</span><span class="p">]:</span>
-
-            <span class="n">name</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
-
-            <span class="n">_size</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span>
-            <span class="k">if</span> <span class="n">_size</span> <span class="o">&gt;</span> <span class="mi">1048576</span><span class="p">:</span>
-                <span class="n">size</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">_size</span> <span class="o">/</span> <span class="mi">1048576</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-                <span class="n">_unit</span> <span class="o">=</span> <span class="s2">&quot;MB&quot;</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">size</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">_size</span> <span class="o">/</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-                <span class="n">_unit</span> <span class="o">=</span> <span class="s2">&quot;KB&quot;</span>
-            <span class="n">url</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;browser_download_url&quot;</span><span class="p">]</span>
-
-            <span class="n">markdown_string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;- [</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">) (</span><span class="si">{</span><span class="n">size</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">_unit</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
-
-        <span class="n">markdown_string</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span>
-
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;downloads.md&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
-        <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">markdown_string</span><span class="p">)</span>
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">facts</span>
 </pre></div>
 
         </div>
@@ -1303,23 +1459,840 @@ Apache 2.0 License</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;v1(id1,0).&#39;,
+ &#39;v1(id2,0).&#39;,
+ &#39;v1(id3,1).&#39;,
+ &#39;v2(id1,1).&#39;,
+ &#39;v2(id2,1).&#39;,
+ &#39;v2(id3,2).&#39;,
+ &#39;v3(id1,1).&#39;,
+ &#39;v3(id2,2).&#39;,
+ &#39;v3(id3,2).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><em>Modes</em> are a type of <em>background knowledge</em> that show up in the fields of <em>Inductive Logic Programming</em> and <em>Statistical Relational Learning</em>. A full discussion of them is not feasible here, but briefly: modes provide (1) <em>type information</em> and help (2) <em>constrain the search space</em> during learning.</p>
+<blockquote><p><em>Alexander did write a <a href="https://hayesall.com/publications/construction-background-knowledge/">slightly longer discussion about modes</a> to accompany a Knowledge Capture article.</em></p>
+<p>ILP/SRL can also be highly sensitive to this type of background knowledge. Andrew Cropper, Sebastijan Dumančić, and Stephen H. Muggleton include a more general treatment of refining and learning background knowledge in <a href="https://www.ijcai.org/proceedings/2020/0673.pdf">their 2020 IJCAI article</a>.</p>
+</blockquote>
+<p>Modes can be set automatically in the propositional setting. The ones below say: "When learning about a binary attribute <code>v4</code>, we will bind the <code>id</code> of an object to a specific instances (<code>id1</code>, <code>id2</code>, <code>id3</code>), and then learn about it with respect to specific values (<code>#</code>) of its attributes <code>v1</code>, <code>v2</code>, and <code>v3</code>."</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
-    <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">build_downloads_page</span><span class="p">()</span>
-    <span class="n">build_dataset_descriptions</span><span class="p">()</span>
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">modes</span>
 </pre></div>
 
         </div>
     </div>
 
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;v1(+id,#varv1).&#39;, &#39;v2(+id,#varv2).&#39;, &#39;v3(+id,#varv3).&#39;, &#39;v4(+id).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="regression">Regression<a class="anchor-link" href="#Regression">&#182;</a></h2><p>When <code>y</code> contains floating point numbers we're in a regression setting.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train</span><span class="p">,</span> <span class="n">modes</span> <span class="o">=</span> <span class="n">from_numpy</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]),</span>
+<span class="p">)</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We represent this by marking all objects as "positive examples," but we want to learn about a <em>continuous value.</em></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">pos</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;regressionExample(v4(id1),1.1).&#39;,
+ &#39;regressionExample(v4(id2),0.9).&#39;,
+ &#39;regressionExample(v4(id3),2.5).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">neg</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">facts</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;v1(id1,0).&#39;,
+ &#39;v1(id2,0).&#39;,
+ &#39;v1(id3,1).&#39;,
+ &#39;v2(id1,1).&#39;,
+ &#39;v2(id2,1).&#39;,
+ &#39;v2(id3,2).&#39;,
+ &#39;v3(id1,1).&#39;,
+ &#39;v3(id2,2).&#39;,
+ &#39;v3(id3,2).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="side-note-naming-variables"><em>Side Note</em>: Naming Variables<a class="anchor-link" href="#Side-Note:-Naming-Variables">&#182;</a></h2><p>From the previous examples, we saw that names for the variables and targets were automatically assigned (with the last value <code>v4</code> being the target).</p>
+<p>The <code>from_numpy</code> function returns a tuple containing a <code>RelationalDataset</code> and a list of strings containing the modes. If an additional list of strings is passed, then those are used when converting the arrays.</p>
+<p>Here we invent a dataset where each <code>id</code> represents a person, and we want to learn about their risk for a condition in based on their age, BMI, and coronary artery calcification (cac) levels.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="n">data</span><span class="p">,</span> <span class="n">modes</span> <span class="o">=</span> <span class="n">from_numpy</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span>
+    <span class="n">y</span><span class="p">,</span>
+    <span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;bmi&quot;</span><span class="p">,</span> <span class="s2">&quot;cac&quot;</span><span class="p">,</span> <span class="s2">&quot;highrisk&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">pos</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;highrisk(id3).&#39;, &#39;highrisk(id4).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">neg</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;highrisk(id1).&#39;, &#39;highrisk(id2).&#39;, &#39;highrisk(id5).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">facts</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;age(id1,1).&#39;,
+ &#39;age(id2,1).&#39;,
+ &#39;age(id3,0).&#39;,
+ &#39;age(id4,1).&#39;,
+ &#39;age(id5,0).&#39;,
+ &#39;bmi(id1,1).&#39;,
+ &#39;bmi(id2,1).&#39;,
+ &#39;bmi(id3,1).&#39;,
+ &#39;bmi(id4,1).&#39;,
+ &#39;bmi(id5,1).&#39;,
+ &#39;cac(id1,2).&#39;,
+ &#39;cac(id2,0).&#39;,
+ &#39;cac(id3,0).&#39;,
+ &#39;cac(id4,1).&#39;,
+ &#39;cac(id5,1).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">modes</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;age(+id,#varage).&#39;,
+ &#39;bmi(+id,#varbmi).&#39;,
+ &#39;cac(+id,#varcac).&#39;,
+ &#39;highrisk(+id).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="worked-example-with-scikit-learns-load_breast_cancer">Worked example with scikit-learn's <code>load_breast_cancer</code><a class="anchor-link" href="#Worked-example-with-scikit-learn's-load_breast_cancer">&#182;</a></h2><p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html"><code>load_breast_cancer</code></a> is based on the <a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)">Breast Cancer Wisconsin dataset</a>.</p>
+<p>Here we: (<strong>1</strong>) load the data and class labels, (<strong>2</strong>) split into training and test sets, (<strong>3</strong>) bin the continuous features to discrete, and (<strong>4</strong>) convert to the relational format.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">KBinsDiscretizer</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="1-load-the-data-target-and-variable-names">(1) Load the data, target, and variable names<a class="anchor-link" href="#(1)-Load-the-data,-target,-and-variable-names">&#182;</a></h3><p>Invoking <code>load_breast_cancer</code> returns a dictionary-like object with keys for <code>.data</code>, <code>.target</code>, <code>.feature_names</code>, and <code>.target_names</code>. We'll use these to pull out our <code>X</code> matrix, <code>y</code> array, and variable names.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">breast_cancer</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+
+<span class="n">bc_X</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">data</span>
+<span class="n">bc_y</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">target</span>
+<span class="n">variable_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">feature_names</span><span class="o">.</span><span class="n">tolist</span><span class="p">()]</span> <span class="o">+</span> <span class="p">[</span><span class="n">breast_cancer</span><span class="o">.</span><span class="n">target_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">bc_X</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([[1.799e+01, 1.038e+01, 1.228e+02, ..., 2.654e-01, 4.601e-01,
+        1.189e-01],
+       [2.057e+01, 1.777e+01, 1.329e+02, ..., 1.860e-01, 2.750e-01,
+        8.902e-02],
+       [1.969e+01, 2.125e+01, 1.300e+02, ..., 2.430e-01, 3.613e-01,
+        8.758e-02],
+       ...,
+       [1.660e+01, 2.808e+01, 1.083e+02, ..., 1.418e-01, 2.218e-01,
+        7.820e-02],
+       [2.060e+01, 2.933e+01, 1.401e+02, ..., 2.650e-01, 4.087e-01,
+        1.240e-01],
+       [7.760e+00, 2.454e+01, 4.792e+01, ..., 0.000e+00, 2.871e-01,
+        7.039e-02]])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">bc_y</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+       0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0,
+       1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0,
+       1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1,
+       1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0,
+       0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1,
+       1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0,
+       0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0,
+       1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1,
+       1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0,
+       0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0,
+       0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+       1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1,
+       1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1,
+       1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
+       1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1,
+       1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1,
+       1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">variable_names</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;meanradius&#39;,
+ &#39;meantexture&#39;,
+ &#39;meanperimeter&#39;,
+ &#39;meanarea&#39;,
+ &#39;meansmoothness&#39;,
+ &#39;meancompactness&#39;,
+ &#39;meanconcavity&#39;,
+ &#39;meanconcavepoints&#39;,
+ &#39;meansymmetry&#39;,
+ &#39;meanfractaldimension&#39;,
+ &#39;radiuserror&#39;,
+ &#39;textureerror&#39;,
+ &#39;perimetererror&#39;,
+ &#39;areaerror&#39;,
+ &#39;smoothnesserror&#39;,
+ &#39;compactnesserror&#39;,
+ &#39;concavityerror&#39;,
+ &#39;concavepointserror&#39;,
+ &#39;symmetryerror&#39;,
+ &#39;fractaldimensionerror&#39;,
+ &#39;worstradius&#39;,
+ &#39;worsttexture&#39;,
+ &#39;worstperimeter&#39;,
+ &#39;worstarea&#39;,
+ &#39;worstsmoothness&#39;,
+ &#39;worstcompactness&#39;,
+ &#39;worstconcavity&#39;,
+ &#39;worstconcavepoints&#39;,
+ &#39;worstsymmetry&#39;,
+ &#39;worstfractaldimension&#39;,
+ &#39;benign&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2-split-out-training-and-test-sets">(2) Split out training and test sets<a class="anchor-link" href="#(2)-Split-out-training-and-test-sets">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">bc_X</span><span class="p">,</span> <span class="n">bc_y</span><span class="p">)</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="3-discretize-continuous-features-to-discrete">(3) Discretize continuous features to discrete<a class="anchor-link" href="#(3)-Discretize-continuous-features-to-discrete">&#182;</a></h3><p>scikit-learn's <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KBinsDiscretizer.html"><code>KBinsDiscretizer</code></a> will help us here, but we'll want an ordinal (0, 1, 2, 3, 4) encoding for our discrete features rather than the default one-hot encoding, and we need to ensure that the resulting matrices are converted back to integers.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">disc</span> <span class="o">=</span> <span class="n">KBinsDiscretizer</span><span class="p">(</span><span class="n">n_bins</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">encode</span><span class="o">=</span><span class="s2">&quot;ordinal&quot;</span><span class="p">)</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">disc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">disc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">X_train</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([[4, 4, 4, ..., 4, 2, 1],
+       [2, 1, 2, ..., 0, 1, 2],
+       [4, 3, 4, ..., 4, 2, 3],
+       ...,
+       [0, 0, 0, ..., 2, 0, 0],
+       [1, 3, 1, ..., 1, 1, 3],
+       [1, 0, 1, ..., 1, 0, 1]])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="4-convert-arrays-to-relationaldataset">(4) Convert arrays to <code>RelationalDataset</code><a class="anchor-link" href="#(4)-Convert-arrays-to-RelationalDataset">&#182;</a></h3><p>Finally, let's convert our training and test folds into <code>RelationalDatasets</code> and <code>modes</code>:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+    <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">bc_train</span><span class="p">,</span> <span class="n">bc_modes</span> <span class="o">=</span> <span class="n">from_numpy</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">variable_names</span><span class="p">)</span>
+<span class="n">bc_test</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">from_numpy</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">variable_names</span><span class="p">)</span>
+
+<span class="n">bc_modes</span>
+</pre></div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;meanradius(+id,#varmeanradius).&#39;,
+ &#39;meantexture(+id,#varmeantexture).&#39;,
+ &#39;meanperimeter(+id,#varmeanperimeter).&#39;,
+ &#39;meanarea(+id,#varmeanarea).&#39;,
+ &#39;meansmoothness(+id,#varmeansmoothness).&#39;,
+ &#39;meancompactness(+id,#varmeancompactness).&#39;,
+ &#39;meanconcavity(+id,#varmeanconcavity).&#39;,
+ &#39;meanconcavepoints(+id,#varmeanconcavepoints).&#39;,
+ &#39;meansymmetry(+id,#varmeansymmetry).&#39;,
+ &#39;meanfractaldimension(+id,#varmeanfractaldimension).&#39;,
+ &#39;radiuserror(+id,#varradiuserror).&#39;,
+ &#39;textureerror(+id,#vartextureerror).&#39;,
+ &#39;perimetererror(+id,#varperimetererror).&#39;,
+ &#39;areaerror(+id,#varareaerror).&#39;,
+ &#39;smoothnesserror(+id,#varsmoothnesserror).&#39;,
+ &#39;compactnesserror(+id,#varcompactnesserror).&#39;,
+ &#39;concavityerror(+id,#varconcavityerror).&#39;,
+ &#39;concavepointserror(+id,#varconcavepointserror).&#39;,
+ &#39;symmetryerror(+id,#varsymmetryerror).&#39;,
+ &#39;fractaldimensionerror(+id,#varfractaldimensionerror).&#39;,
+ &#39;worstradius(+id,#varworstradius).&#39;,
+ &#39;worsttexture(+id,#varworsttexture).&#39;,
+ &#39;worstperimeter(+id,#varworstperimeter).&#39;,
+ &#39;worstarea(+id,#varworstarea).&#39;,
+ &#39;worstsmoothness(+id,#varworstsmoothness).&#39;,
+ &#39;worstcompactness(+id,#varworstcompactness).&#39;,
+ &#39;worstconcavity(+id,#varworstconcavity).&#39;,
+ &#39;worstconcavepoints(+id,#varworstconcavepoints).&#39;,
+ &#39;worstsymmetry(+id,#varworstsymmetry).&#39;,
+ &#39;worstfractaldimension(+id,#varworstfractaldimension).&#39;,
+ &#39;benign(+id).&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -1334,7 +2307,7 @@ Apache 2.0 License</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 6, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 25, 2021</span>
       
     
   </small>
@@ -1364,7 +2337,7 @@ Apache 2.0 License</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: None" rel="prev">
+        <a href="../00_loading_and_fetching/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fetching and Loading Data" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1373,20 +2346,20 @@ Apache 2.0 License</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              None
+              Fetching and Loading Data
             </div>
           </div>
         </a>
       
       
         
-        <a href="../changelog/" class="md-footer__link md-footer__link--next" aria-label="Next: None" rel="next">
+        <a href="../../changelog/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              None
+              Changelog
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1415,10 +2388,10 @@ Apache 2.0 License</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.56a63758.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56a63758.min.js"></script>
       
     
   </body>
