@@ -62,7 +62,9 @@ def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) 
     #   type of the `y` vector, the conversion is not possible.
     _task = _get_task(y)
 
-    if not names:
+    if names:
+        assert len(names) == X.shape[1] + 1
+    else:
         # + 2 to start from 1.
         names = [f"v{i}" for i in range(1, X.shape[1] + 2)]
 
