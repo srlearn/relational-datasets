@@ -1,2 +1,7 @@
+# Required
+
+# Optional but needed for testing
+
 pytest
 pytest-cov
+numpy>=1.20.0
