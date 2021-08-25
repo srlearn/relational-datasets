@@ -31,9 +31,11 @@ setup(
     python_requires=">=3.7",
     classifiers=[
         "License :: OSI Approved :: Apache Software License",
+        "Development Status :: 4 - Beta",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
     extra_requires={
         "tests": ["coverage", "pytest"],
+        "convert": ["numpy>=1.20.0"],
     },
 )
