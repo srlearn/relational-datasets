@@ -28,7 +28,7 @@ Open enhancements and bugs are tracked here:
 
 But here is a short-term Roadmap:
 
-- [ ] Modes: https://github.com/srlearn/datasets/issues/11
+- [ ] Modes: [srlearn/datasets: Issue 11](https://github.com/srlearn/datasets/issues/11)
 - [ ] Converting propositional->relational
   - [ ] Problem Settings
     - [X] Binary Classification

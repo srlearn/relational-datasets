@@ -22,8 +22,36 @@ def _get_task(y: np.ndarray) -> str:
 
 
 def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) -> Tuple[RelationalDataset, List[str]]:
-    """Convert a pair of numpy data (X) and target (y) arrays to a
-    RelationalDataset"""
+    """Convert numpy data (`X`) and target (`y`) arrays to a RelationalDataset
+    with modes.
+
+    Arguments:
+        X: Integer matrix of covariates
+        y: Integer or float array containing the target variable
+        names: List of strings representing the variable names
+
+    Returns:
+        Tuple of `RelationalDataset` and a list of strings containing the modes
+
+    Raises:
+        TypeError: When classification vs. regression cannot be determined from
+            the types of the input values.
+
+    Examples:
+
+    Demonstrates converting a set of binary classification data.
+
+    ```python
+    from relational_datasets.convert import from_numpy
+    import numpy as np
+
+    data, modes = from_numpy(
+      np.array([[0, 1, 1], [0, 1, 2], [1, 2, 2]]),
+      np.array([0, 0, 1]),
+    )
+    ```
+
+    """
 
     assert X.shape[0] == y.shape[0]
 
@@ -34,7 +62,9 @@ def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) 
     #   type of the `y` vector, the conversion is not possible.
     _task = _get_task(y)
 
-    if not names:
+    if names:
+        assert len(names) == X.shape[1] + 1
+    else:
         # + 2 to start from 1.
         names = [f"v{i}" for i in range(1, X.shape[1] + 2)]
 
