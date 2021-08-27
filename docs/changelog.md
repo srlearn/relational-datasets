@@ -1,5 +1,30 @@
 # Changelog
 
+## Beta
+
+### v0.2.0 - 2021-08-27
+
+Software Changes:
+
+- Add `convert` module with `from_numpy` implementation to convert binary
+  classification and regression datasets based on ordinal encodings.
+- Fix type annotations in `relational_datasets.request`
+- Fix type annotations in `relational_datasets.types`
+
+Documentation:
+
+- Add tutorial for converting vector/propositional datasets to relational
+- Add `mkdocs` dependency: `pymdownx.tasklist`
+- Add `binder` and `colab` launch badges to Jupyter notebook tutorials
+
+Testing:
+
+- Add `lgtm` build step + README badge
+- Add `codecov` build step + README badge
+- Add `numpy>=1.20.0` as an optional setup target, and test against it
+  (this is the earliest version of `numpy` where type annotations for `mypy`
+  seem to be consistently available)
+
 ## Pre-Alpha
 
 ### v0.1.1 - 2021-08-10
