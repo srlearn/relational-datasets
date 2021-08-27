@@ -26,7 +26,12 @@ setup(
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://srlearn.github.io/relational-datasets/",
-    download_url="https://github.com/srlearn/relational-datasets",
+    download_url="https://pypi.org/project/relational-datasets/",
+    project_urls={
+        "Bug Tracker": "https://github.com/srlearn/relational-datasets/issues",
+        "Documentation": "https://srlearn.github.io/relational-datasets/",
+        "Source Code": "https://github.com/srlearn/relational-datasets/",
+    },
     license="Apache License, Version 2.0",
     python_requires=">=3.7",
     classifiers=[
