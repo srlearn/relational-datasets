@@ -49,7 +49,7 @@ DATASETS = [
     "icml",
     "boston_housing",
 ]
-LATEST_VERSION = "v0.0.4"
+LATEST_VERSION = "v0.0.5"
 
 
 def latest_version() -> str:
