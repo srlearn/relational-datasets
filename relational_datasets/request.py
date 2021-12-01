@@ -48,6 +48,8 @@ DATASETS = [
     "nell_sports",
     "icml",
     "boston_housing",
+    "drug_interactions",
+    "toy_machines",
 ]
 LATEST_VERSION = "v0.0.5"
 
