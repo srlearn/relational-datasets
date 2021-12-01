@@ -2,6 +2,13 @@
 
 ## Beta
 
+### v0.2.1 - 2021-12-01
+
+Software Changes:
+
+- Add `drug_interactions` and `toy_machines` datasets
+- Add `v0.0.5` as the latest `srlearn/datasets` release
+
 ### v0.2.0 - 2021-08-27
 
 Software Changes:
