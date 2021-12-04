@@ -11,10 +11,16 @@ import numpy as np
 from ..types import RelationalDataset
 
 
+def _is_multiclass(y: np.ndarray) -> bool:
+    return np.unique(y).size > 2
+
+
 def _get_task(y: np.ndarray) -> str:
     """Return classification/regression"""
 
     if str(y.dtype)[:3] == 'int':
+        if _is_multiclass(y):
+            return 'multiclass-classification'
         return 'classification'
     elif str(y.dtype)[:5] == 'float':
         return 'regression'
@@ -77,6 +83,10 @@ def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) 
             else:
                 neg.append(f"{names[-1]}(id{i}).")
 
+    elif _task == "multiclass-classification":
+        for i, row in enumerate(y, 1):
+            pos.append(f"{names[-1]}(id{i},{row}).")
+
     else:
         # _get_task(y) == "regression"
         for i, row in enumerate(y, 1):
@@ -87,6 +97,9 @@ def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) 
         facts += [f"{var}(id{j},{row})." for j, row in enumerate(col, 1)]
 
     modes = [f"{name}(+id,#var{name})." for name in names[:-1]]
-    modes += [f"{names[-1]}(+id)."]
+    if _task == "multiclass-classification":
+        modes += [f"{names[-1]}(+id,#classlabel)."]
+    else:
+        modes += [f"{names[-1]}(+id)."]
 
     return RelationalDataset(pos=pos, neg=neg, facts=facts), modes
