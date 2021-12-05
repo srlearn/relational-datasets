@@ -2,6 +2,20 @@
 
 ## Beta
 
+### v0.2.2 - 2021-12-04
+
+Software Changes:
+
+- Add multiclass support to `convert.from_numpy`
+
+Documentation:
+
+- Add notebook with overview on converting multiclass vector datasets
+
+Testing:
+
+- Add tests for `convert.from_numpy`
+
 ### v0.2.1 - 2021-12-01
 
 Software Changes:
