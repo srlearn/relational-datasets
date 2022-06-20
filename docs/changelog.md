@@ -2,6 +2,19 @@
 
 ## Beta
 
+### v0.3.0 - 2022-06-20
+
+Software Changes:
+
+- Append the name of the variable to the discrete variable value in `from_numpy`
+  https://github.com/srlearn/relational-datasets/pull/25
+
+Documentation Changes:
+
+- Add `mkdocstrings-python` dependency https://github.com/srlearn/relational-datasets/pull/27
+- Drop `handler` in `docs/api/*` for generating docstrings https://github.com/srlearn/relational-datasets/pull/27
+- Update cells by running notebooks https://github.com/srlearn/relational-datasets/pull/26
+
 ### v0.2.2 - 2021-12-04
 
 Software Changes:
