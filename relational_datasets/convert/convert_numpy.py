@@ -85,7 +85,7 @@ def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) 
 
     elif _task == "multiclass-classification":
         for i, row in enumerate(y, 1):
-            pos.append(f"{names[-1]}(id{i},{row}).")
+            pos.append(f"{names[-1]}(id{i},{names[-1]}_{row}).")
 
     else:
         # _get_task(y) == "regression"
@@ -94,7 +94,7 @@ def from_numpy(X: np.ndarray, y: np.ndarray, names: Optional[List[str]] = None) 
 
     for i, col in enumerate(X.T):
         var = names[i]
-        facts += [f"{var}(id{j},{row})." for j, row in enumerate(col, 1)]
+        facts += [f"{var}(id{j},{var}_{row})." for j, row in enumerate(col, 1)]
 
     modes = [f"{name}(+id,#var{name})." for name in names[:-1]]
     if _task == "multiclass-classification":
