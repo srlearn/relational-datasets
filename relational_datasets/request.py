@@ -50,6 +50,8 @@ DATASETS = [
     "boston_housing",
     "drug_interactions",
     "toy_machines",
+    "california_housing",
+    "roofworld20",
 ]
 LATEST_VERSION = "v0.0.6"
 
