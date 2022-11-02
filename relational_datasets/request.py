@@ -50,8 +50,10 @@ DATASETS = [
     "boston_housing",
     "drug_interactions",
     "toy_machines",
+    "california_housing",
+    "roofworld20",
 ]
-LATEST_VERSION = "v0.0.5"
+LATEST_VERSION = "v0.0.6"
 
 
 def latest_version() -> str:
