@@ -2,6 +2,21 @@
 
 ## Beta
 
+### v0.4.0 - 2022-11-03
+
+Software Changes:
+
+- ✨ Bump `datasets` to `v0.0.6`, Add `california_housing` and `roofworld20` https://github.com/srlearn/relational-datasets/pull/28
+
+Documentation Changes:
+
+- ✨ Dataset loading recommendations. All pages under "Dataset descriptions" now have Python and Julia tabs recommending how to load the latest version of each dataset https://github.com/srlearn/relational-datasets/pull/30
+
+CI Changes:
+
+- 🔧 Bump codecov-action to `v3` https://github.com/srlearn/relational-datasets/pull/29
+- 🔧 Set `pythonpublish.yml` to use `pypi-publish` https://github.com/srlearn/relational-datasets/pull/31
+
 ### v0.3.0 - 2022-06-20
 
 Software Changes:
