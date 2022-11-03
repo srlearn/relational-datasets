@@ -27,8 +27,26 @@ from urllib.request import urlopen
 TOKEN = environ["GH_TOKEN"]
 AUTHORIZATION = {"Authorization": f"token {TOKEN}"}
 
+DATA_LOAD_RECOMMENDATION = """
 
-def build_dataset_descriptions():
+=== "Python"
+
+    ``` python
+    from relational_datasets import load
+    train, test = load("{dataset_name}", "{version}")
+    ```
+
+=== "Julia"
+
+    ``` julia
+    using RelationalDatasets
+    train, test = load("{dataset_name}", "{version}")
+    ```
+
+"""
+
+
+def build_dataset_descriptions(latest_version: str):
 
     req = Request(
         "https://api.github.com/repos/srlearn/datasets/releases/latest",
@@ -47,11 +65,19 @@ def build_dataset_descriptions():
         )
 
         with urlopen(req) as url:
-            with open(f"dataset_descriptions/{name}.md", "w") as fh:
-                fh.write(url.read().decode("utf-8"))
+            description = url.read().decode("utf-8").splitlines()
+
+        # Insert dataset loading instructions at the third position in the list.
+        description.insert(
+            2, DATA_LOAD_RECOMMENDATION.format(dataset_name=name, version=latest_version)
+        )
+
+        with open(f"dataset_descriptions/{name}.md", "w") as fh:
+            for line in description:
+                fh.write(line + "\n")
 
 
-def build_downloads_page():
+def build_downloads_page() -> str:
 
     req = Request(
         "https://api.github.com/repos/srlearn/datasets/git/refs/tags",
@@ -108,7 +134,10 @@ def build_downloads_page():
     with open("downloads.md", "w") as fh:
         fh.write(markdown_string)
 
+    # The first entry of `all_versions` should be the most recent one.
+    return all_versions[0]
+
 
 if __name__ == "__main__":
-    build_downloads_page()
-    build_dataset_descriptions()
+    latest_version = build_downloads_page()
+    build_dataset_descriptions(latest_version)
