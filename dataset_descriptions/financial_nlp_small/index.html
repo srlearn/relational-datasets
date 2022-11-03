@@ -842,6 +842,20 @@
 
 
 <h1 id="financial_nlp_small">financial_nlp_small<a class="headerlink" href="#financial_nlp_small" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">Julia</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">relational_datasets</span> <span class="kn">import</span> <span class="n">load</span>
+<span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;financial_nlp_small&quot;</span><span class="p">,</span> <span class="s2">&quot;v0.0.6&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">RelationalDatasets</span><span class="w"></span>
+<span class="n">train</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">load</span><span class="p">(</span><span class="s">&quot;financial_nlp_small&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;v0.0.6&quot;</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <p>"Financial NLP Small" started with sentences from company initial public
 offering documents (IPO SEC Form S-1) that were converted to relational facts
 with <a href="https://github.com/hayesall/rnlp/"><code>rnlp</code></a>.</p>

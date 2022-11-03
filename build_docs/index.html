@@ -1964,49 +1964,41 @@ AUTHORIZATION = {"Authorization": f"token {TOKEN}"}</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">build_dataset_descriptions</span><span class="p">():</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">DATA_LOAD_RECOMMENDATION</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
-        <span class="s2">&quot;https://api.github.com/repos/srlearn/datasets/releases/latest&quot;</span><span class="p">,</span>
-        <span class="n">headers</span><span class="o">=</span><span class="n">AUTHORIZATION</span><span class="p">,</span>
-    <span class="p">)</span>
+<span class="s2">=== &quot;Python&quot;</span>
 
-    <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="k">as</span> <span class="n">url</span><span class="p">:</span>
-        <span class="n">latest</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="s2">    ``` python</span>
+<span class="s2">    from relational_datasets import load</span>
+<span class="s2">    train, test = load(&quot;</span><span class="si">{dataset_name}</span><span class="s2">&quot;, &quot;</span><span class="si">{version}</span><span class="s2">&quot;)</span>
+<span class="s2">    ```</span>
 
-    <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">latest</span><span class="p">[</span><span class="s2">&quot;assets&quot;</span><span class="p">]:</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_v&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="s2">=== &quot;Julia&quot;</span>
 
-        <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;https://raw.githubusercontent.com/srlearn/datasets/main/srlearn/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">/README.md&quot;</span><span class="p">,</span>
-            <span class="n">headers</span><span class="o">=</span><span class="n">AUTHORIZATION</span><span class="p">,</span>
-        <span class="p">)</span>
+<span class="s2">    ``` julia</span>
+<span class="s2">    using RelationalDatasets</span>
+<span class="s2">    train, test = load(&quot;</span><span class="si">{dataset_name}</span><span class="s2">&quot;, &quot;</span><span class="si">{version}</span><span class="s2">&quot;)</span>
+<span class="s2">    ```</span>
 
-        <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="k">as</span> <span class="n">url</span><span class="p">:</span>
-            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dataset_descriptions/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.md&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
-                <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt">def build_dataset_descriptions():
+<div id="cell-4" class="clipboard-copy-txt">DATA_LOAD_RECOMMENDATION = """
 
-    req = Request(
-        "https://api.github.com/repos/srlearn/datasets/releases/latest",
-        headers=AUTHORIZATION,
-    )
+=== "Python"
 
-    with urlopen(req) as url:
-        latest = json.loads(url.read().decode("utf-8"))
+    ``` python
+    from relational_datasets import load
+    train, test = load("{dataset_name}", "{version}")
+    ```
 
-    for asset in latest["assets"]:
-        name = asset["name"].split("_v")[0]
+=== "Julia"
 
-        req = Request(
-            f"https://raw.githubusercontent.com/srlearn/datasets/main/srlearn/{name}/README.md",
-            headers=AUTHORIZATION,
-        )
+    ``` julia
+    using RelationalDatasets
+    train, test = load("{dataset_name}", "{version}")
+    ```
 
-        with urlopen(req) as url:
-            with open(f"dataset_descriptions/{name}.md", "w") as fh:
-                fh.write(url.read().decode("utf-8"))</div>
+"""</div>
     
         </div>
     </div>
@@ -2036,7 +2028,95 @@ AUTHORIZATION = {"Authorization": f"token {TOKEN}"}</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">build_downloads_page</span><span class="p">():</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">build_dataset_descriptions</span><span class="p">(</span><span class="n">latest_version</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+
+    <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
+        <span class="s2">&quot;https://api.github.com/repos/srlearn/datasets/releases/latest&quot;</span><span class="p">,</span>
+        <span class="n">headers</span><span class="o">=</span><span class="n">AUTHORIZATION</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="k">as</span> <span class="n">url</span><span class="p">:</span>
+        <span class="n">latest</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">latest</span><span class="p">[</span><span class="s2">&quot;assets&quot;</span><span class="p">]:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_v&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;https://raw.githubusercontent.com/srlearn/datasets/main/srlearn/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">/README.md&quot;</span><span class="p">,</span>
+            <span class="n">headers</span><span class="o">=</span><span class="n">AUTHORIZATION</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span> <span class="k">as</span> <span class="n">url</span><span class="p">:</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+
+        <span class="c1"># Insert dataset loading instructions at the third position in the list.</span>
+        <span class="n">description</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span>
+            <span class="mi">2</span><span class="p">,</span> <span class="n">DATA_LOAD_RECOMMENDATION</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">latest_version</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dataset_descriptions/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.md&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">description</span><span class="p">:</span>
+                <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+<div id="cell-5" class="clipboard-copy-txt">def build_dataset_descriptions(latest_version: str):
+
+    req = Request(
+        "https://api.github.com/repos/srlearn/datasets/releases/latest",
+        headers=AUTHORIZATION,
+    )
+
+    with urlopen(req) as url:
+        latest = json.loads(url.read().decode("utf-8"))
+
+    for asset in latest["assets"]:
+        name = asset["name"].split("_v")[0]
+
+        req = Request(
+            f"https://raw.githubusercontent.com/srlearn/datasets/main/srlearn/{name}/README.md",
+            headers=AUTHORIZATION,
+        )
+
+        with urlopen(req) as url:
+            description = url.read().decode("utf-8").splitlines()
+
+        # Insert dataset loading instructions at the third position in the list.
+        description.insert(
+            2, DATA_LOAD_RECOMMENDATION.format(dataset_name=name, version=latest_version)
+        )
+
+        with open(f"dataset_descriptions/{name}.md", "w") as fh:
+            for line in description:
+                fh.write(line + "\n")</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-6">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">build_downloads_page</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
     <span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span>
         <span class="s2">&quot;https://api.github.com/repos/srlearn/datasets/git/refs/tags&quot;</span><span class="p">,</span>
@@ -2092,8 +2172,11 @@ AUTHORIZATION = {"Authorization": f"token {TOKEN}"}</div>
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;downloads.md&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
         <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">markdown_string</span><span class="p">)</span>
+
+    <span class="c1"># The first entry of `all_versions` should be the most recent one.</span>
+    <span class="k">return</span> <span class="n">all_versions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt">def build_downloads_page():
+<div id="cell-6" class="clipboard-copy-txt">def build_downloads_page() -> str:
 
     req = Request(
         "https://api.github.com/repos/srlearn/datasets/git/refs/tags",
@@ -2148,7 +2231,10 @@ AUTHORIZATION = {"Authorization": f"token {TOKEN}"}</div>
         markdown_string += "\n\n"
 
     with open("downloads.md", "w") as fh:
-        fh.write(markdown_string)</div>
+        fh.write(markdown_string)
+
+    # The first entry of `all_versions` should be the most recent one.
+    return all_versions[0]</div>
     
         </div>
     </div>
@@ -2168,7 +2254,7 @@ AUTHORIZATION = {"Authorization": f"token {TOKEN}"}</div>
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-6">
+            <clipboard-copy for="cell-7">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -2179,12 +2265,12 @@ AUTHORIZATION = {"Authorization": f"token {TOKEN}"}</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">build_downloads_page</span><span class="p">()</span>
-    <span class="n">build_dataset_descriptions</span><span class="p">()</span>
+    <span class="n">latest_version</span> <span class="o">=</span> <span class="n">build_downloads_page</span><span class="p">()</span>
+    <span class="n">build_dataset_descriptions</span><span class="p">(</span><span class="n">latest_version</span><span class="p">)</span>
 </pre></div>
-<div id="cell-6" class="clipboard-copy-txt">if __name__ == "__main__":
-    build_downloads_page()
-    build_dataset_descriptions()</div>
+<div id="cell-7" class="clipboard-copy-txt">if __name__ == "__main__":
+    latest_version = build_downloads_page()
+    build_dataset_descriptions(latest_version)</div>
     
         </div>
     </div>
@@ -2203,7 +2289,7 @@ AUTHORIZATION = {"Authorization": f"token {TOKEN}"}</div>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 6, 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 3, 2022</span>
       
     
   </small>
