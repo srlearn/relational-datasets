@@ -2,137 +2,137 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://srlearn.github.io/relational-datasets/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/build_docs/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/changelog/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/downloads/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/api/convert.from_numpy/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/api/relationaldataset/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/api/request.deserialize_zipfile/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/api/request.fetch/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/api/request.latest_version/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/api/request.load/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/boston_housing/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/california_housing/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/citeseer/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/cora/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/drug_interactions/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/financial_nlp_small/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/icml/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/nell_sports/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/roofworld20/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/toy_cancer/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/toy_father/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/toy_machines/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/uwcse/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/dataset_descriptions/webkb/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/notebooks/00_loading_and_fetching/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/notebooks/01_converting_propositional_datasets/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://srlearn.github.io/relational-datasets/notebooks/02_multiclass/</loc>
-         <lastmod>2022-11-03</lastmod>
+         <lastmod>2022-11-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
